@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner - Stay Productive</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Daily Planner</h1>
+            <p>Organize your day, achieve your goals</p>
+        </div>
+
+        <div class="main-grid">
+            <div class="sidebar">
+                <div class="card profile-section">
+                    <div class="profile-avatar">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="profile-name">My Day Planner</div>
+                    <div class="profile-subtitle">Stay Organized, Stay Productive</div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalTasks">0</span>
+                            <span class="stat-label">Total Tasks</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="completedTasks">0</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card wellness-section">
+                    <h3>Daily Wellness</h3>
+                    
+                    <div class="wellness-item">
+                        <div class="wellness-left">
+                            <div class="wellness-icon icon-workout">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="wellness-info">
+                                <div class="wellness-title">Workout</div>
+                                <div class="wellness-value" id="workoutDisplay">Not tracked</div>
+                            </div>
+                        </div>
+                        <button class="wellness-btn" onclick="updateWorkout()">Log</button>
+                    </div>
+
+                    <div class="wellness-item">
+                        <div class="wellness-left">
+                            <div class="wellness-icon icon-water">
+                                <i class="fas fa-glass-water"></i>
+                            </div>
+                            <div class="wellness-info">
+                                <div class="wellness-title">Water Intake</div>
+                                <div class="wellness-value" id="waterDisplay">0 glasses</div>
+                            </div>
+                        </div>
+                        <button class="wellness-btn" onclick="addWater()">+1</button>
+                    </div>
+
+                    <div class="wellness-item">
+                        <div class="wellness-left">
+                            <div class="wellness-icon icon-sleep">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div class="wellness-info">
+                                <div class="wellness-title">Sleep Goal</div>
+                                <div class="wellness-value">6 hours/night</div>
+                            </div>
+                        </div>
+                        <button class="wellness-btn" onclick="toggleSleep()">Track</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-container">
+                <div class="tasks-card">
+                    <div class="tasks-header">
+                        <div class="tasks-title">Today's Tasks</div>
+                        <div class="task-count" id="taskCount">0 tasks</div>
+                    </div>
+
+                    <div class="add-task-section">
+                        <div class="task-input-wrapper">
+                            <input type="text" 
+                                   class="task-input" 
+                                   id="taskInput" 
+                                   placeholder="What needs to be done? (e.g., Update LinkedIn profile, Study DSA...)">
+                            <button class="add-task-btn" onclick="addTask()">
+                                <i class="fas fa-plus"></i>
+                                Add Task
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tasks-list" id="tasksList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
