@@ -19,3 +19,11 @@ A modern, glassmorphism-inspired web application to manage your daily tasks and 
 ## 📂 How to Run
 1. Clone this repository.
 2. Open `index.html` in your browser.                                                                                                                                                  <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/bed40e22-e61d-4fb5-b624-788a04c6199a" />
+## 🌐 Live Demo
+
+Experience the application live:
+
+🔗 **Live Website:** https://aksharadileep.github.io/Responsive-To-Do-List-Website/
+
+The website allows users to efficiently manage daily tasks, track wellness goals, monitor productivity, and stay organized through a modern, responsive, and interactive interface.
+
